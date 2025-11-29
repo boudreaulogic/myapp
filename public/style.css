@@ -65,3 +65,136 @@ button:active {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
     border: 1px solid var(--bl-gray-soft);
 }
+
+
+/* ---------- Brand variables (keep / add if missing) ---------- */
+:root {
+    --bl-navy: #101827;
+    --bl-beige: #F5F0E8;
+    --bl-teal: #3CB8A4;
+    --bl-gray-soft: #D3D0C8;
+    --bl-gray-dark: #4B5563;
+}
+
+/* Base body reset / background */
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Poppins", sans-serif;
+    background: var(--bl-beige);
+    color: var(--bl-navy);
+}
+
+/* Center main content a bit */
+main {
+    padding: 32px 16px;
+    text-align: center;
+}
+
+/* ---------- Header ---------- */
+
+.bl-header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--bl-gray-soft);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.bl-header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+/* Brand block (logo + text) */
+.bl-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.bl-logo {
+    height: 40px;
+    width: auto;
+    display: block;
+}
+
+.bl-brand-text {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+}
+
+.bl-brand-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.03em;
+}
+
+.bl-brand-tagline {
+    font-size: 0.75rem;
+    color: var(--bl-gray-dark);
+}
+
+/* Nav links */
+.bl-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.bl-nav-link {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: var(--bl-gray-dark);
+    padding: 6px 10px;
+    border-radius: 999px;
+    transition: background 0.15s ease, color 0.15s ease, transform 0.1s ease;
+}
+
+/* Hover state */
+.bl-nav-link:hover {
+    background: var(--bl-gray-soft);
+    color: var(--bl-navy);
+    transform: translateY(-1px);
+}
+
+/* Call-to-action nav link (Contact) */
+.bl-nav-cta {
+    background: var(--bl-navy);
+    color: var(--bl-beige);
+    border: 1px solid var(--bl-navy);
+    font-weight: 500;
+}
+
+.bl-nav-cta:hover {
+    background: var(--bl-teal);
+    border-color: var(--bl-teal);
+    color: var(--bl-beige);
+}
+
+/* ---------- Mobile responsiveness ---------- */
+
+@media (max-width: 700px) {
+    .bl-header-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+    }
+
+    .bl-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .bl-nav-link {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
+}
