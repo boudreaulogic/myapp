@@ -1,24 +1,67 @@
+/* ---------- Brand variables ---------- */
+:root {
+    --bl-navy: #101827;
+    --bl-beige: #F5F0E8;
+    --bl-teal: #3CB8A4;
+    --bl-gray-soft: #D3D0C8;
+    --bl-gray-dark: #4B5563;
+}
+
 /* Applies to whole page */
 body {
-    font-family: Arial, sans-serif;
-    background: #111;
-    color: white;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Inter", "Poppins", sans-serif;
+    background: var(--bl-beige);      /* soft cream like your logo */
+    color: var(--bl-navy);            /* main text in deep navy */
     text-align: center;
     padding: 50px;
+    margin: 0;
 }
 
-/* Button styling */
+/* Generic headings */
+h1, h2, h3 {
+    color: var(--bl-navy);
+    margin-bottom: 0.5rem;
+}
+
+/* Subtle secondary text */
+p {
+    color: var(--bl-gray-dark);
+}
+
+/* Button styling – brand primary */
 button {
-    padding: 10px 20px;
+    padding: 10px 24px;
     cursor: pointer;
-    border: none;
-    background: dodgerblue;
-    color: white;
+    border-radius: 999px;
+    border: 1px solid var(--bl-navy);
+    background: var(--bl-navy);       /* solid deep navy */
+    color: var(--bl-beige);           /* light text */
     font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: background 0.15s ease, transform 0.1s ease, box-shadow 0.15s ease;
 }
 
-/* Hover effect */
+/* Hover/active states */
 button:hover {
-    background: deepskyblue;
+    background: var(--bl-teal);       /* accent teal pop */
+    border-color: var(--bl-teal);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
 }
 
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+}
+
+/* Optional card/container style if you wrap content */
+.card {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 32px 24px;
+    background: #FFFFFF;
+    border-radius: 16px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+    border: 1px solid var(--bl-gray-soft);
+}
